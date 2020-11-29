@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Todo App</title>
+</head>
+<body>
+  <h1>Welcome to To-do App!</h1>
+  <h2>Insert To-do</h2>
+  <form action="/todos" method="POST">
+    <input type="text" placeholder="priority" name="priority">
+    <input type="text" placeholder="todo" name="todo">
+    <button type="submit">Submit</button>
+  </form>
+  <h4>View To-dos at /todolist</h4>
+  <p>Insert priority parameter if needed: /todolist?priority=high</p>
+  <h4>Delete To-dos at /deletetodo</h4>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!-- todoview.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Todo App</title>
+</head>
+<body>
+  <h1>Welcome to To-do App!</h1>
+  <h3>Insert To-do</h3>
+  <form action="/todos" method="POST">
+    <input type="text" placeholder="priority" name="priority">
+    <input type="text" placeholder="todo" name="todo">
+    <button type="submit">Submit</button>
+  </form>
+  <h3>To-do List</h3>
+  <ul class="todos">
+    <% for(var i = 0; i < todos.length; i++) { %>
+        <li class="todo">
+            <span><%= todos[i].priority %></span>:
+            <span><%= todos[i].todo %></span>
+        </li>
+    <% } %>
+  </ul>
+</body>
+</html>
+
+//const ejs = require('ejs');
+//app.set('view engine', ejs);
+
+// Todo.find( function(error, todos) { //{ priority: 'high' },{ priority: priority },
+//     if (error) console.error(error)
+//     console.log(todos)
+//     const todopage = ejs.render('todoview.ejs', { todos: todos });
+//     res.render(todopage) 
+// })  //res.render('todoview.ejs', { todos: todos })
